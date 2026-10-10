@@ -1,0 +1,12 @@
+---
+config:
+  theme: redux
+---
+flowchart TB
+    Root["CNN Hyperparameters"] --- A["L1 (Sparsity Regularization Factor)"] & B["L2 (Weight Decay based Regularization Factor)"] & C["Dropout Rate"] & D["Learning Rate"] & E["Epochs"] & F["Batch Size"]
+    A --- G["Mitigates Overfitting"] & H["Regulate Model Complexity"]
+    B --- G & G
+    F --- I["Determines Sample Sizes"]
+    C --- K["Reduce Model Overfitting"]
+    D --- L["Controls Gradient Step Size<br>& Convergence Rate"]
+    E --- P["Defines Total Dataset Passes"]

@@ -1,0 +1,12 @@
+---
+config:
+  theme: redux
+---
+flowchart LR
+    Root["Convoluitional Neural Network Metrics"] --- A["ROC (Receiver Operating Characteristic) Curve"] & B["Classification Accuracy"] & C["AUC (Area Under Curve) Score"] & D["False Alarm Rate (FAR)"] & E["Precision"] & F["Recall (TPR/Sensitivity)"]
+    B --- G["$$\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}$$"]
+    E --- H["$$\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}$$"]
+    F --- I["$$\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}$$"]
+    D --- J["$$\text{False Alarm Rate} = \frac{\text{FP}}{\text{FP} + \text{TN}}$$"]
+    C --- K["$$\text{AUC} = \int_{0}^{1} \text{TPR}(\text{FPR}^{-1}(t)) \, dt$$"]
+    NOTE["Legend: <br>TP = True Positives <br> TN = True Negatives <br> FP = False Positives <br> FN = False Negatives"]

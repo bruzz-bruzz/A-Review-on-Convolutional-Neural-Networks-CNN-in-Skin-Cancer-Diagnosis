@@ -1,0 +1,12 @@
+---
+config:
+  theme: redux
+---
+flowchart TB
+    Root["Skin Cancer Types"] --- Node2@{ label: "<img src=\"https://upload.wikimedia.org/wikipedia/commons/6/6c/Melanoma.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original\" width=\"40\"> Melanoma" } & A["Non-Melanoma"]
+    A --- Node3@{ label: "<img src=\"https://images.emedicinehealth.com/images/slideshow/skin_cancer_s19_basal_cell_carcinoma.jpg?resize=400px:*&amp;output-quality=75\" width=\"40\"> Basal Cell Carcinoma - BCC" } & Node4@{ label: "<img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOx2oFpr3lvNlQFre6QdFanwCIMqEqab9tjWyksMv57Np8VwocUmzinTXT&amp;s=10\" width=\"40\"> Squamous Cell Carcinoma - SCC" }
+
+    Root@{ shape: rounded}
+    Node2@{ shape: rect}
+    Node3@{ shape: rect}
+    Node4@{ shape: rect}
