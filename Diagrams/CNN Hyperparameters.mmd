@@ -1,12 +1,15 @@
----
-config:
-  theme: redux
----
-flowchart TB
-    Root["CNN Hyperparameters"] --- A["L1 (Sparsity Regularization Factor)"] & B["L2 (Weight Decay based Regularization Factor)"] & C["Dropout Rate"] & D["Learning Rate"] & E["Epochs"] & F["Batch Size"]
-    A --- G["Mitigates Overfitting"] & H["Regulate Model Complexity"]
-    B --- G & G
-    F --- I["Determines Sample Sizes"]
-    C --- K["Reduce Model Overfitting"]
-    D --- L["Controls Gradient Step Size<br>& Convergence Rate"]
-    E --- P["Defines Total Dataset Passes"]
+graph TD
+    Root["CNN Hyperparameters"] --> L1["L1 (Sparsity Regularization Factor)"]
+    Root --> L2["L2 (Weight Decay based Regularization Factor)"]
+    Root --> Dropout["Dropout Rate"]
+    Root --> LR["Learning Rate"]
+    Root --> Epochs["Epochs"]
+    Root --> Batch["Batch Size"]
+
+    L1 --> Regulate["Regulate Model Complexity"]
+    L1 --> Mitigate["Mitigates Overfitting"]
+    L2 --> Mitigate
+    Dropout --> Reduce["Reduce Model Overfitting"]
+    LR --> Controls["Controls Gradient Step Size<br>& Convergence Rate"]
+    Epochs --> Defines["Defines Total Dataset Passes"]
+    Batch --> Determines["Determines Sample Sizes"]
